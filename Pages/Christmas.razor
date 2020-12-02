@@ -1,0 +1,19 @@
+@page "/christmas"
+
+@using xmasblazor.Data
+@inject ChristmasTreeService ChristmasTree
+
+<h1>Christmas Tree</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="TurnOn">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void TurnOn()
+    {
+        ChristmasTree.TurnOn();
+    }
+}
